@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>javascript</title>
+    </head>
+    <body>
+        <h1></h1>
+        <button onclick="test()">CEIL</button>
+        <button onclick="test1()">FLOOR</button>
+        <button onclick="test2()">SQUARE ROOT</button>
+        <button onclick="test3()">ABSOLUTR VALUE</button>
+        <button onclick="test4()">PI</button>
+        <button onclick="test5()">ROUND</button>
+        <button onclick="test6()">POWER</button>
+        <button onclick="test7()">MINIMUM VALUE</button>
+        <button onclick="test8()">MAXIMUM VALUE</button>
+        <button onclick="test9()">RANDOM VALUE</button>
+        <button onclick="test10()">GET OTP</button>
+    </body>
+    <script>
+        function test(){
+            var x= prompt('enter a value:','');
+            var c=Math.ceil(x);
+            document.getElementsByTagName('h1')[0].innerText=c;
+        }
+        function test1(){
+            var x= prompt('enter a value:','');
+            var f=Math.floor(x);
+            document.getElementsByTagName('h1')[0].innerText=f;
+        }
+        function test2(){
+            var x= prompt('enter a value:','');
+            var sq=Math.sqrt(x);
+            document.getElementsByTagName('h1')[0].innerText=sq;
+        }
+        function test3(){
+            var x= prompt('enter a value:','');
+            var a=Math.abs(x);
+            document.getElementsByTagName('h1')[0].innerText=a;
+        }
+        function test4(){
+            var p=Math.PI;
+            document.getElementsByTagName('h1')[0].innerText=p;
+        }
+        function test5(){
+            var x= prompt('enter a value:','');
+            var r=Math.round(x);
+            document.getElementsByTagName('h1')[0].innerText=r;
+        }
+        function test6(){
+            var x= prompt('enter a value:','');
+            var x1= prompt('enter another value:','');
+            var pw=Math.pow(x,x1);
+            document.getElementsByTagName('h1')[0].innerText=pw;
+        }
+        function test7(){
+            var x= prompt('enter a value:','');
+            var x1= prompt('enter another value:','');
+            var x2= prompt('enter another value:','');
+            var mn=Math.min(x,x1,x2);
+            document.getElementsByTagName('h1')[0].innerText=mn;
+        }
+        function test8(){
+            var x= prompt('enter a value:','');
+            var x1= prompt('enter another value:','');
+            var x2= prompt('enter another value:','');
+            var mx=Math.max(x,x1,x2);
+            document.getElementsByTagName('h1')[0].innerText=mx;
+        }
+        function test9(){
+            var rn=Math.random();
+            document.getElementsByTagName('h1')[0].innerText=rn;
+        }
+        //otp generator
+        function test10(){
+            var otp=Math.round(Math.random()*10000);
+            document.getElementsByTagName('h1')[0].innerText=otp;
+        }
+    </script>
+</html>

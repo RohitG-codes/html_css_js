@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESPONSIVE MULTIPAGE WEBSITE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+</head>    
+<body>
+    <!-----HEADER----->
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="download.jpg"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hidemenu()"></i>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">COURSE</a></li>
+                    <li><a href="">BLOG</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showmenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>WORLD'S BIGGEST INSTITUTE</h1>
+            <p>The Neotia Institute of Technology Management and Science or NITMAS. is a private engineering college in the state of West Bengal, India. Situated on Diamond Harbor Road 39 kilometers (24 mi) on the south western fringes of Kolkata, the institute is affiliated to the Maulana Abul Kalam Azad University of Technology formerly Known as West Bengal University of Technology and approved by All India Council of Technical Education (AICTE) and Directorate General of Shipping, India.   
+            </p>
+            <a href="" class="hero-btn">VISIT US TO KNOW MORE</a>
+        </div>
+    </section>
+    <!-----COURSE----->
+    <section class="course">
+        <h1>COURSES WE OFFER</h1>
+        <p>
+            The Courses we offer may give you a job.
+        </p>
+        <div class="row">   
+            <div class="course-col">
+                <h3>CSE</h3>
+                <p>
+                    The full form of CSE is Computer Science Engineering. It is an engineering course that involves several computer science aspects essential for the creation of the computer system.
+                </p>
+            </div>
+            <div class="course-col">
+                <h3>ECE</h3>
+                <p>
+                    The full form of ECE is Electronics and Communications Engineering.ECE is distinguished by the additional use of active components such as semiconductor devices to amplify and control electric current flow.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-----CAMPUS----->
+    <section class="campus">
+        <h1>Our Global Campus</h1>
+        <p>Our campus is so big and enormous.</p>
+        <div class="row">
+            <div class="campus-col">
+                <img src="download (2).jpg">
+                <div class="layer">
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="1.jpg">
+                <div class="layer">
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="1558415218_Scholastic_building_3.jpg">
+                <div class="layer">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-----FACILITIES----->
+    <section class="facilities">
+        <h1>our Facilities</h1>
+        <p>Our institute has all kind of facilities including gym,swimming pool e.t.c.</p>
+        <div class="row">
+            <div class="facilities-col">
+                <img src="images.jpg">
+            </div>
+            <div class="facilities-col">
+                <img src="266297_IMG-20190427-WA0000.jpg">
+            </div>
+            <div class="facilities-col">
+                <img src="images (1).jpg">
+            </div>
+        </div>
+    </section>
+    <!-----TESTIMONIALS----->
+    <section class="testimonials">
+        <h1>What our student says</h1>
+        <p>Feedback of the students who completed their graduation from our college.
+        </p>
+        <div class="test-col">
+            <img src="360_F_246344306_E4KQf8mvvWsCAwrSMEEY6GUOa22TjiUn.jpg">
+            <div>
+                <p>The canteen of the college also offers good food at reasonable prices and the college is also equipped basic gym facilities and medical facilities.
+                </p>
+                <h3>Falguni Di</h3>
+            </div>
+            <img src="istockphoto-1158014305-612x612.jpg">
+            <div>
+                <p>The infrastructure of our college is very good for study with all modern facilities like conference rooms, Wi-Fi campus and library with all good books related to the curriculum .
+                </p>
+                <h3>Anirban Da</h3>
+            </div>
+        </div>
+    </section>
+    <!-----CALL TO ACTION----->
+    <section class="cta">
+        <h1>Enroll for our various online courses <br>
+            any where from the world</h1>
+        <a href="" class="hero-btn">CONTACT US</a>
+    </section>
+    <!-----FOOTER----->
+    <section class="footer">
+        <h4>ABOUT US</h4>
+        <p>Neotia Institute of Technology, Management and        Science (NITMAS) is a dynamic endeavour of <br> The Ambuja Neotia Group in the field of technological education.
+        </p>
+    </section>
+    <!-----JAVASCRIPT FOR TOGGLE MENU----->
+    <script>
+       var navLinks = document.getElementById("nvLinks");
+        function showmenu(){
+           navLinks.style.right = "0";
+        }
+        function hidemenu(){
+           navLinks.style.right = "-200px";
+        }
+    </script>    
+</body>
+</html>

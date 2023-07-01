@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <body>
+        <h1>First Page</h1>
+        <h2></h2>
+        <button onclick="window.history.forward()">FORWARD WINDOW</button>
+        <button onclick="window.history.back()">BACKWARD WINDOW</button>
+        <button onclick="window.history.go(1)">GOTO</button> 
+        <!--0 means first page,1 means 2nd page and 2 means third page .....(like array),it can be (-ve) as well -->
+    </body>
+    <script>
+        var c=window.history.length;
+        document.getElementsByTagName('h2')[0].innerHTML=c;
+    </script>
+</html>

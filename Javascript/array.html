@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <body>
+        <h1 id="res"></h1>
+        <button onclick="pop()">POP</button>
+        <button onclick="push()">PUSH</button>
+        <button onclick="reverse()">REVERSE</button>
+        <button onclick="Slice()">SLICE</button>
+        <button onclick="shift()">SHIFT</button>
+    </body>
+    <script>
+        /*nums=[1,2,3,5,6];
+        document.write(nums[2]+ "<br>");
+        document.write(nums[7]+ "<br>");
+        nums[5]=7;
+        document.write(nums[5]+ "<br>");
+        //another method
+        cars=new Array(1,2,3,5,6);
+        document.write(cars[4]+ "<br>");
+        cars[5]=8;
+        document.write(cars[5]+ "<br>");*/
+        //important array methods
+        //var fruits=['mango','apple','banana','orange'];
+        //var flag = Array.isArray(fruits);
+        //var flag = fruits.join(' | '); //it can be any sign(?,!,$ e.t.c) 
+        //var flag = fruits.indexOf('apple');
+        //var vegetables=['potato','onion','ginger','tomato']; 
+        //var flag = fruits.concat(vegetables); 
+        //var flag = vegetables.concat(fruits); 
+        //document.write('<h1>' + flag + '</h1>');
+        var fru_veg=['mango','apple','banana','orange','potato','onion','ginger','tomato'];
+        var demo = fru_veg;
+        document.getElementById('res').innerText=demo;
+        function pop(){
+            demo.pop();
+            document.getElementById('res').innerText=demo;
+        } 
+        function push(){
+            var x = prompt('enter name of any fruit or vegetable')
+            demo.push(x);
+            document.getElementById('res').innerText=demo;
+        }          
+        function reverse(){
+            demo.reverse();
+            document.getElementById('res').innerText=demo;
+        }   
+        function Slice(){
+            var x = demo.slice(2);
+            document.getElementById('res').innerText = x;
+        }   
+        function shift(){
+            demo.shift();
+            document.getElementById('res').innerText=demo;
+        }   
+    </script>
+</html>

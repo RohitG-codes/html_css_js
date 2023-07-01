@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <body>
+        <h1>Second Page</h1>
+        <h2></h2>
+        <button onclick="window.history.forward()">FORWARD WINDOW</button>
+        <button onclick="window.history.back()">BACKWARD WINDOW</button>
+        <button onclick="window.history.go(1)">GOTO</button>
+    </body>
+    <script>
+        var c=window.history.length;
+        document.getElementsByTagName('h2')[0].innerHTML=c;
+    </script>
+</html>

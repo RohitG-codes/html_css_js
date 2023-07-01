@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <body>
+        <input type="text" name="name" id="name"> 
+        <button onclick="greet()">Greet</button>
+        <div class="greet"></div>
+    </body>
+    <script>
+         function greet(){
+            var nam=document.getElementById('name').value //it will fetch the value from the input box and assign it to nam
+            str="Hello"+ nam;
+            document.getElementsByClassName('greet')[0].innerHTML=str;
+         }
+    </script>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+    <style type="text/css">
+        .main{
+            width: 500px;
+            height: 500px;
+            background-color: brown;
+        }
+        #row1{
+            width: 500px;
+            height: 250px; 
+            background-color: blue;
+        }
+        #row2{
+            width: 500px;
+            height: 250px;
+            background-color: blueviolet;
+        }
+        .column1{
+            width: 250px;
+            height:250px ;
+            background-color:aqua;
+            float: left;
+        }
+        .column2{
+            width: 250px;
+            height: 250px;
+            background-color: chartreuse;
+            float:left;
+        }
+        .column3{
+            width: 250px;
+            height: 250px;
+            background-color:darkcyan;
+            float:left;
+        }
+        .column4{
+            width: 250px;
+            height: 250px;
+            background-color:coral;
+            float:left;
+        }
+        .lorem{
+        height: 1300px;
+        width: 500px;
+        background-color: rgb(211, 30, 66);
+        font-size:41px;
+        color: chartreuse;
+        font-weight: bold;
+        font-style:italic;
+        text-align:center;
+        text-decoration:underline;
+        text-transform: capitalize;
+        word-spacing: 20px;
+        letter-spacing: 20px;
+        }
+        .anchor{
+            text-decoration: none;
+        }
+        .subscribe{
+            height: 36px;
+            width: 105px;
+            background-color: rgb(200, 0, 0);
+            color: white;
+            border-radius: 2px;
+            border: none;
+            margin-right: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .subscribe:hover{
+            opacity: 0.7;
+        }
+        .subscribe:active{
+            opacity: 0.3;
+        }
+        .join{
+            height: 36px;
+            width: 62px;
+            background-color:white;
+            border-color:blue;
+            color: blue;
+            border-radius: 2px;
+            border-style: solid;
+            border-width: 1px;
+            cursor: pointer;
+        }
+        .join:hover{
+            opacity: 0.7;
+        }
+        .join:active{
+            opacity: 0.3;
+        }
+        .tweet{
+            height: 36 px;
+            width: 74px;
+            background-color:blue;
+            color: white;
+            border: none;
+            border-radius: 18px;
+            font-size: 15px;
+            font-weight: bold;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+        .tweet:hover{
+            opacity: 0.7;
+        }
+        .tweet:active{
+            opacity: 0.3;
+        }
+        .rohit{
+            height: 100px;
+            width: 100px;
+            background-color: blueviolet;
+            color: aqua;
+            cursor: pointer;
+            border: none;
+        }
+        .rohit:hover{
+            background-color: blue;
+            color: brown;
+        }
+        .rohit:active{
+            background-color: chartreuse;
+            color:darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <!--first css properties-->
+    <div class="main">
+        <div id="row1">
+            <div class="column1">
+                ROHIT
+            </div>
+            <div class="column2">
+                RAJA
+            </div>
+        </div>
+        <div id="row2">
+            <div class="column3">
+                RAJEN
+            </div>
+            <div class="column4">
+                MANJU
+            </div>
+        </div>
+    </div>
+    <!--second css properties-->
+    <div class="lorem">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ratione neque sapiente dolorem necessitatibus repellat dolor delectus doloremque, sed sit cumque enim alias aperiam? Impedit aliquid voluptates hic laboriosam tempora!
+    </div>
+    <!--no underline for a link-->
+    <a href="https://wwww.google.com" class="anchor">Google</a>
+    <hr>
+    <!--subscribe button-->
+    <button class="subscribe">
+        subscribe
+    </button>
+    <hr>
+    <!--join button-->
+    <button class="join">
+        join
+    </button>
+    <hr>
+    <!--tweet button-->
+    <button class="tweet">
+        Tweet
+    </button>
+    <hr>
+    <button class="rohit">ROHIT</button>
+</body>
+</html>

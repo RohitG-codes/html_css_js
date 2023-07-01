@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <body>
+        <button onclick="this.style.display='none'">CLICK ME TO HIDE ME</button>
+        <button onclick="change(this)">CLICK TO CHANGE MY COLOUR</button>
+    </body>
+    <script>
+        var x=this;
+        alert(x);
+        var person={
+            firstname:"rohit",
+            lastname:"gupta",
+            fullname:function(){
+                return this.firstname +"     "+ this.lastname;
+            }
+        }
+        document.write('<h1>'+person.fullname()+'</h1>');
+        function change(anything){
+            anything.style.background='red';
+        }
+    </script>
+</html>

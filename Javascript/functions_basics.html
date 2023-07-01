@@ -1,0 +1,383 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*
+    //normal function 
+    function greet(){
+        document.write("hi! i'm Rohit Gupta"+"<br>");
+    }
+    greet()
+    //functions expression
+    let testing = function (){
+        document.write("hi! i'm Rohit Gupta"+"<br>");
+    }
+    testing()
+    //arrow functions 
+    let test=()=>{
+        document.write("hi! i'm Rohit Gupta"+"<br>");
+    }
+    test();
+    let test1 = num => num%2==0; //num -> argument //num%2==0 -> return num%2==0
+    document.write(test1(8)+"<br>");
+    //hoisting intro
+    greet1() //this can only be done in javascript and also you can't do this in function expression or in arrrow function
+    function greet1(){
+        document.write("hi! i'm Rohit Gupta"+"<br>");
+    }
+    */
+    /* 
+    //block scope vs function scope
+    {
+        let a=9;
+    }
+    document.write(a+"<br>"); //output error because let is block scope
+    {
+        const a1=99;
+    }
+    document.write(a1+"<br>"); //output error because const is also block scope
+    {
+        var a2=999;
+    }
+    document.write(a2+"<br>");  //output - 999 because var is function scope
+    */
+    //rest parameter
+    /*
+    function myfunc(a,b,...c){
+        document.write(`a is ${a}`+"<br>");
+        document.write(`b is ${b}`+"<br>");
+        document.write(`c is ${c}`+"<br>");
+        document.write(Array.isArray(c)); //here c returns an array
+    }
+    myfunc(1,2,3,4,5,6,7,8,9);
+    */
+    /*
+    //parameter destructuring
+    let details1 ={ name : 'rohit' , age : 21};
+    function person1(obj){
+        document.write(obj.name+"<br>");
+        document.write(obj.age+"<br>");
+    }
+    person1(details1);
+    let details ={ name : 'rohit' , age : 21};
+    function person({name:nameeee,age:ageeeee}){ //you can also do this -> function person({name,age}){ alert(name); alert(age);} person(details)
+        document.write(nameeee+"<br>");
+        document.write(ageeeee+"<br>");
+    }
+    person(details);
+    */
+    /*
+    //callback function
+    function test(){
+        document.write('hi! how are you?'+"<br>");
+    }
+    function test1(a){
+        a();
+    }    
+    test1(test);
+    */                 //callback function and function returning function are called higher order function
+    /*
+    // function returning function
+    function test(){
+        function test1(){
+            document.write('hi! how are you?'+"<br>");
+        }
+        return test1;
+    }
+    let a=test();
+    a();
+    */
+    /*
+    //forEach method
+    let arr = [1,2,3,5,6,7,8];
+    arr.forEach(double);
+    function double(num,index){
+        document.write('index is',index+ " ");
+        document.write('number is',num+" ");
+        document.write(`${num} x 2 = ${num*2}`+"<br>");
+    } 
+    //you can also do like this
+    arr.forEach(function(num,index){
+        document.write('index is',index+ " ");
+        document.write('number is',num+" ");
+        document.write(`${num} x 2 = ${num*2}`+"<br>");
+    })
+    */
+    /*
+    //map method
+    let arr=[1,2,3,5,6,7,8];
+    function square(num){
+        document.write(`${num} x ${num} = ${num*num}`+"<br>");
+    }
+    arr.map(square)
+    //you can also do like this
+    arr.map( function(num){
+        document.write(`${num} x ${num} = ${num*num}`+"<br>");
+    });
+    */
+    /*
+    //filter method
+    let arr=[1,2,3,5,6,7,8];
+    let a = arr.filter((num) => {return num%2 == 0 });
+    document.write(a)
+    */
+    /*
+    //reduce method
+    let arr=[1,2,3,5,6,7,8];
+    let A = arr.reduce((a,b) => {return a+b }); //at first -> a=1,b=2,a+b=3 ,next-> a=3,b=3,a+b=6 and so on 
+    document.write(A +"<br>"); //a= accumulator | b=currentvalue
+    let a1 = arr.reduce((a,b) => {return a+b },100); //here at first -> a is 100
+    document.write(a1);
+    */
+    /*
+    //sort method
+    let arr=[8,7,6,5,2,3,1];//for numbers the sort method will work in a different way.it takes the numbers as strigs and compare them with respect to their ASCII values
+    let a = arr.sort((a,b) => {return a-b });//but here if a-b>0 ,then first b will come then a .if a-b<0 ,then first a will come then b  
+    document.write(a+"<br>"); //like 8-7 is >0 that's why first 7 will come then 8 , but 2-3 is <0 that's why first 2 will come then 3 
+    let arr1=['z','x','q','a','d','B','A']; //for strings the comparison is done using ASCII values.uppercase will come first because their ACSCII value is less than lowercase
+    document.write(arr1.sort());
+    */
+    /*
+    //find method
+    let arr=['11','2111','311','511','61','1117','8'];
+    let a = arr.find((string) => {return string.length==3 }); //returns first element whose length is 2
+    document.write(a+"<br>");
+    */
+    /*
+    //every method
+    let arr=[10,20,30,50,60,70,80];
+    let a= arr.every((num)=>{return num%2===0}); //it checks every number is even or not
+    document.write(a+"<br>");
+    */
+    /*
+    //some method
+    let arr=[1,2,3,5,6,7,8];
+    let a=arr.some((num)=>{return num%2===0}); //it checks any number is even or not
+    document.write(a+"<br>");
+    */
+    /*
+    //fill method
+    let arr=[1,2,3,5,6,7,8];
+    let a= arr.fill(101,2,5); //value | start | end //it will replace all the elements with the given value between the start and end index 
+    document.write(a+"<br>");
+    let a1=new Array(10).fill(99);
+    document.write(a1+"<br>");
+    */
+    /*
+    //splice method
+    let arr=[1,2,3,5,6,7,8];
+    let a=arr.splice(2,4,99); //start | delete | insert //it will delete 4 elements starting from index 2 and insert 99 at that place
+    //let a=arr.splice(2,4); //if you want you don't need to insert anything
+    document.write(a+"<br>"); //it will return the deleted elements
+    document.write(arr+"<br>"); //it will return the new array
+    */
+    /*
+    //create your own method
+    let user ={
+        name:'rohit',
+        age:21,
+        about:function(){
+            document.write("hello");
+        }
+    }
+    user.about();
+    */
+    /*
+    //call apply bind method
+    function test(){
+        document.write("hi"+"<br>"+"<hr>");
+    }
+    test.call();
+    let user1={
+        name:'rohita',
+        age:21,
+        about:function(hobby,sex){
+            document.write(this.name+"<br>"+this.age+"<br>"+hobby+"<br>"+sex+"<hr>")
+        }
+    }
+    let user2={
+        name:"mohit",
+        age:22
+    }
+    user1.about.call(user1,'cricket','female');
+    user1.about.call(user2,'football','male');
+    user1.about.apply(user1,['cricket','female']);
+    user1.about.apply(user2,['football','male']);
+    let myfunc1=user1.about.bind(user1,'cricket','female');//bind returns a function
+    myfunc1();
+    let myfunc2=user1.about.bind(user2,'cricket','female');
+    myfunc2();
+    */
+    /*
+    //arrow function and this keyword
+    let user1={
+        name:'rohit',
+        age:21,
+        about: ()=> {
+            document.write(this.name); //here the output will be blank because the arrow function takes 'this' from one level up  
+        }                              //which is 'window object' (that's why this doesn't work in arrow function)
+    }
+    user1.about();
+    document.write(this+"<br>"); // output -> window object
+    console.log(this);
+    //short syntax
+    let user2={
+        name:'rohit',
+        age:21,
+        about(){ //if you want you don't need to write arrow function here
+            document.write(this.name + "  " +this.age); 
+        }    
+    }
+    user2.about();
+    */
+    /*
+    //ptoto or [[Prototype]]
+    //in official ecmascript documentation proto is written as [[prototype]]
+    let obj1={
+     k1:'val1',
+     k2:'val2'
+    }
+    let obj2=Object.create(obj1); //this is same like creating a object -> let obj2={};
+    obj2.k3='val3';
+    console.log(obj2 ); //see the console
+    document.write(obj2.k3 +"<br>"); //output->val3
+    document.write(obj2.k2+"<br>"); //output->val2 //here obj2 doesn't have k2 or k1,though it is printing val1,val2
+    document.write(obj2.k1+"<br>"); //output->val1 //because obj2 has a proto chain or [[Prototype]] where the k1 an k2 is stored
+    console.log(obj2.__proto__); //see the console
+    */
+    /*
+    //prototype
+    //only functions can provide prototype property
+    function test(){
+        document.write("hello"+"<br>");              ////....proto is a refference but protype is an object....////
+    }
+    test(); //in JS functions can also be represented as objects
+    test.myownproperty="rohit"; //you can add key value pair to function as well like objects
+    document.write(test.myownproperty+"<br>");
+    document.write(test.name+"<br>");
+    test.prototype.mytitle='gupta'; //now mytitle:"gupta" is stored in the prototype as a key value pair
+    console.log(test.prototype);//see the console
+    test.prototype.func=function(){
+        return "hello func";
+    }
+    document.write(test.prototype.func());
+    */
+    /////////////////..................//////////////////////
+    //create functions to create multiple objects
+    /*function createuser(fname,lname,age,sex){
+    let user={};
+    user.fname=fname;
+    user.lname=lname;
+    user.age=age;
+    user.sex=sex;
+    user.about=function(){
+        return `${this.fname} is ${this.age} years old`
+    }
+    user.is18=function(){
+       return this.age>=18;
+    }
+    return user
+    }
+    let user1=createuser('rohit','gupta',21,'male');
+    document.write(user1.about()+"<br>");
+    document.write(user1.is18()+"<br>");
+    document.write(user1.lname+"<br>");
+    */
+    //here if you create 1 million users the two methods will be called every time,for which huge amount of memory will be lost
+    //alternative way to overcome this problem -> store methos in different objects
+    /*
+    let usermethods={
+    about:function(){
+        return `${this.fname} is ${this.age} years old`
+    },
+    is18:function(){
+       return this.age>=18;
+     }
+    }
+    function createuser(fname,lname,age,sex){
+    let user={};
+    user.fname=fname;
+    user.lname=lname;
+    user.age=age;
+    user.sex=sex;
+    user.about=usermethods.about; //cerating refference of the usermethods 
+    user.is18=usermethods.is18; //cerating refference of the usermethods
+    return user
+    }
+    let user1=createuser('rohit','gupta',21,'male');
+    document.write(user1.about()+"<br>");
+    document.write(user1.is18()+"<br>");
+    document.write(user1.lname+"<br>");
+    */
+    //here if you create 1 million methods you have to pass the refferences 1 million times
+    //instead of this you can create a proto chain
+    /*
+    let usermethods={
+    about:function(){
+        return `${this.fname} is ${this.age} years old`
+    },
+    is18:function(){
+       return this.age>=18;
+    }
+    }
+    function createuser(fname,lname,age,sex){
+    let user=Object.create(usermethods); //creating a proto chain.here you don't have to pass the refferences multiple times
+    user.fname=fname;
+    user.lname=lname;
+    user.age=age;
+    user.sex=sex;
+    return user;
+    }
+    let user1=createuser('rohit','gupta',21,'male');
+    document.write(user1.about()+"<br>");
+    document.write(user1.is18()+"<br>");
+    document.write(user1.lname+"<br>");
+    console.log(user1); //see the console
+    */
+    /*
+    // new keyword
+    function user(name,age){ //here,first new keyword is creating an empty object this{},then it is adding value to it and also returning it
+        this.name=name;                     //also it will create a proto automatically
+        this.age=age;     //'this' is called constructor function
+    }
+    let user1= new user('rohit',21);
+    console.log(user1);//see the console
+    document.write(user1.name +" "+user1.age+"<br>");
+    function createuser(fname,lname,age,sex){
+    //here you don't have to create any object,"new" will create it automatically    
+    this.fname=fname;
+    this.lname=lname;
+    this.age=age;
+    this.sex=sex;
+    //here you don't have to return anything because "new" will return it automatically
+    }
+    createuser.prototype.about=function(){
+        return `${this.fname} is ${this.age} years old`
+    }
+    createuser.prototype.is18=function(){
+       return this.age>=18;
+    }
+    let user2=new createuser('rohit','gupta',21,'male');
+    console.log(user2);
+    document.write(user2.about()+"<br>");
+    document.write(user2.is18()+"<br>");
+    document.write(user2.lname+"<br>");
+    for(let key in user2){
+        document.write(key +"<br>"); //here all the keys will be printed
+    }
+    for(let key in user2){
+        if(user2.hasOwnProperty(key)){
+            document.write(key +"<br>"); //here only the this.keys will be printed(because these are its own property) not the keys of prototype
+        }
+    }
+    */
+    /////////////////..................//////////////////////
+</script>
+</html>

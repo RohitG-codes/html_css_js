@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS</title>
+    <style type="text/css">
+        .main{
+            width: 500px;
+            height: 500px;
+            border: 10px solid black;
+            border-radius: 10px;
+            border-bottom: 10px solid red;
+            border-top: 10px solid yellow;
+            /*
+            border-left: 10px solid brown;
+            border-right: 10px solid green;
+            */
+            margin: auto;
+        }
+        .main1{
+            width: 280px;
+            height: 250px;
+            border: 10px brown solid;
+            margin: 5px;
+            
+            margin-top: 15px;
+            margin-bottom: 15px;
+            margin-left: 5px;
+            margin-right: 5px;
+            /*same as above(short hand property of margin)
+            margin: 15px 5px 15px 5px;
+            */
+            padding: 25px;
+            padding-top: 170px;
+            padding-left: 160px;
+        }
+        .main2{
+            height: 1000px;
+            width: 1000px;
+            border: 5px red solid;
+            margin: auto;
+            font-size: 30px;
+            text-align: justify;
+            background-image: url('Desert.jpg');
+            background-repeat: no-repeat; /*you can use repeat-x or repeat-y as well*/
+            background-position: center;
+            background-size: cover; /*instead of cover you can use '100% 100%' (width height)*/
+            background-attachment: fixed;/*by default it is 'scroll'*/
+        }
+        .main3{
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+            background-color: red;
+            background-color: rgb(255,0, 0);
+            background-color: rgba(255, 0, 0, 0.8);
+            background-color: white;
+            margin: auto;
+            margin-top: 50px;
+            box-shadow: -5px -5px 10px 5px green;
+        }
+        .main4{
+            text-align: center;
+            margin-top: 50px;
+            font-size: 50px;
+            text-shadow: 5px 5px 20px rgb(0,200,200)
+        }
+        .main5{
+            height: 400px;
+            width: 400px;
+            border: 2px solid black;
+            margin: auto;
+            overflow: scroll;
+            overflow-x: hidden;
+        }
+        .main6{
+            height: 200px;
+            width: 200px;
+            margin: auto;
+            border: 2px solid black;
+            transform: translate(100px,100px);
+            transform: translateX(100px);
+            transform: translateY(100px);
+            transform: skew(10deg,10deg);
+            transform: skewX(10deg);
+            transform: skewY(10deg);
+            transform: rotate(10deg,10deg);
+            transform: rotateX(100deg);
+            transform: rotateY(100deg);
+            transform: rotateZ(100deg);
+            transform: scale(1.2);
+            transform: scaleX(2);
+            transform: scaleY(2);
+            transform: scaleZ(30000);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="main1">
+            Rohit Gupta
+        </div>
+    </div>
+    <hr/>
+    <div class="main2">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium sint, repellendus laborum veniam, dignissimos aliquid fugiat minima ex, a libero suscipit quas quam et aut excepturi. Corrupti accusamus veniam omnis?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat illum modi error natus, soluta, minus numquam veritatis sed ad labore cumque debitis alias ipsa quas consequuntur ducimus dicta eaque laudantium?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui illo, unde animi pariatur, quis impedit adipisci voluptates provident corrupti eos exercitationem maxime asperiores molestias dolor in recusandae. Ad, in reiciendis.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores explicabo vitae repellat velit tempora modi quo aut officia dignissimos illum, obcaecati nemo laboriosam odio facere natus sed ab. Voluptatum, esse?
+        </p>
+    </div>
+    <hr/>
+    <div class="main3">
+        <div class="main4">
+            Rohit Gupta
+        </div>
+    </div>
+    <hr/>
+    <div class="main5">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, hic. Voluptas saepe et quia exercitationem, obcaecati consequuntur perferendis non dignissimos, aspernatur quos corporis esse voluptatum nesciunt. Esse nihil id eaque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium sint, repellendus laborum veniam, dignissimos aliquid fugiat minima ex, a libero suscipit quas quam et aut excepturi. Corrupti accusamus veniam omnis?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat illum modi error natus, soluta, minus numquam veritatis sed ad labore cumque debitis alias ipsa quas consequuntur ducimus dicta eaque laudantium?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui illo, unde animi pariatur, quis impedit adipisci voluptates provident corrupti eos exercitationem maxime asperiores molestias dolor in recusandae. Ad, in reiciendis.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores explicabo vitae repellat velit tempora modi quo aut officia dignissimos illum, obcaecati nemo laboriosam odio facere natus sed ab. Voluptatum, esse?
+        </p>
+    </div>
+    <hr/>
+    <div class="main6">
+
+    </div >
+    
+</body>
+</html>

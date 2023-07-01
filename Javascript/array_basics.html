@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>/*
+    //clone array
+    let arr1=[1,2,3]
+    //let arr2=arr1;// here if you change the value of arr1 ,arr2 also got changed
+    //let arr2=[].concat(arr1); //but here the above case will not happen,cause here arr2 is a new array
+    //let arr2=arr1.slice(0); //but here the above case will not happen,cause here arr2 is a new array
+    let arr2=[...arr1];// it is called spread operator //but here the above case will not happen,cause here arr2 is a new array
+    arr1.push(4);
+    alert(arr1);
+    alert(arr2);
+    */
+   /*
+    //for-of loop
+    const arr1=[1,2,3,5,6,7,8,9];
+    for(let i of arr1){
+        alert(i);//it will give value
+    }
+    */
+    /*
+    //for-in loop
+    const arr1=[1,2,3,5,6,7,8,9];
+    for(let i in arr1){
+        alert(i); //it will give index number
+        alert(arr1[i]);//it will give value
+    }
+    */
+    //array destricturing
+    const arr1=['val1','val2','val3','val5','val7'];
+    let[v1,v3,v2,...varr]=arr1;
+    alert(v1);
+    alert(v2);
+    alert(v3);
+    alert(varr);
+</script>
+</html>

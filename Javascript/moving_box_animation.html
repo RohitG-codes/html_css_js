@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .yellow{
+            margin-top: 10px;
+            height: 400px;
+            width: 400px;
+            background: yellow;
+            position: relative;
+        }
+        .red{
+            height: 50px;
+            width: 50px;
+            background: red;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="test()">CLICK TO START ANIMATION</button>
+    <div class="yellow">
+        <div class="red"></div>
+    </div>
+</body>
+<script>
+    function test(){
+        var redbox=document.getElementsByClassName('red')[0];
+        var porx = 0; //porx=position of red box
+        var animate = setInterval(anime,5);//5ms
+        function anime(){
+            if(porx == 350){
+                clearInterval(animate);
+            }
+            else{
+                porx++;
+                redbox.style.top=porx + "px";
+                redbox.style.left=porx + "px";
+            }
+            
+        }
+    }
+</script>
+</html>

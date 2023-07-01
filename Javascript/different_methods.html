@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <body>
+        <button onclick="start()">START</button>
+        <!-- <h1 id="res"></h1> -->
+        <button onclick="stop()">STOP</button>
+    </body>
+    <script>
+        /*
+        //setinterval
+        function start(){
+            setInterval(function() {
+               alert('Rohit Gupta');
+            }, 4000); //4000 ms = 4sec
+        }
+        */
+        /*
+        //clearinetrval
+        var x=setInterval(count,1000); //1000 ms = 1sec
+        var c=0;
+        function count(){
+            document.getElementById('res').innerHTML=c;
+            c++;
+        }
+        function stop(){
+            clearInterval(x);
+        }
+        */
+       /*
+        //settimeout
+        function start(){
+            setTimeout(function(){
+                alert('ROhit Gupta');
+            },4000); //4000 ms = 4sec
+        }
+        */
+       /*
+       //cleartimeout
+       var x; //global variable so that you can use it in anywhere
+       function start(){ //but if you declare a variable inside a function it will become an local variable(only works within that function)
+            x=setTimeout(function(){
+                document.write("Rohit Gupta")
+            },5000);
+       }
+       function stop(){
+        clearTimeout(x);
+        alert("timeout stopped");
+       }
+       */
+    </script>
+</html>

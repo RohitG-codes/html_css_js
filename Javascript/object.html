@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*
+    //basics of object
+    let person ={
+        'name': 'rohit',
+        'age':'21',
+    }
+    alert(person.name);
+    alert(person.age);
+    person['gender']='male';
+    alert(person.gender);
+    let key='height';
+    person[key]='6.0"';
+    alert(person.height);
+    for(let i in person){
+        alert(`${i} : ${person[i]}`); // i = keys | person[i] = values
+    }
+    const details={'name': 'rohit','age':'21','sex':'male','height':'5.9"'};
+    for(let key in details){
+        document.write(key+"<br>")
+        document.write(details[key]+"<br>")
+    }
+    */
+    /*
+    //computed properties
+    let k1='obj1';
+    let k2='obj2';
+    let v1='val1';
+    let v2='val2';
+    let new1 = {
+        [k1] : v1,
+        [k2] : v2
+    };
+    for(let i in new1){
+        alert(`${i} : ${new1[i]}`); // i = keys | person[i] = values
+    }
+    */
+    /*
+    //object destricturing
+    const person ={
+        'name': 'rohit',
+        'age':'21',
+    }
+    let{name:NAME,age:AGE}=person;//for array destructuring you have to use [] and for object destructuring you have to use {}
+    document.write(NAME+"<br>");
+    document.write(AGE+"<br>");
+    let newobj={..."Rohit"};
+    console.log(newobj); //output - 0: "R" , 1: "o" , 2: "h" , 3: "i" , 4: "t"
+    */
+    /*
+    //objects inside array
+    const details=[
+    {'name': 'rohit','age':'21'},
+    {'name': 'rohit1','age':'22'},
+    {'name': 'rohit2','age':'23'},
+    {'name': 'rohit3','age':'25'}
+    ]
+    console.log(details);
+    for(let i of details){
+        document.write(i.name+"<br>");
+        document.write(i.age+ "<br>");
+    }
+    let[d1,d2,d3,d4]=details; 
+    document.write(d1.name+"<br>")
+    document.write(d3.age+"<br>")
+    */  
+    //in javascript array and strings are iterable but objects are not iterable
+    /*
+    //object cloning
+    let obj1={name:'rohit',age:21}
+    let obj2=obj1; //here obj2 is dependent on obj1 ,if you change obj1,obj2 will also get changed
+    obj1.name='chandra';
+    document.write(obj1.name+"<br>");
+    document.write(obj2.name+"<br>");
+    let obj3={...obj1}; //here obj3 is independent on obj1 ,if you change obj1,obj3 will not get changed
+    obj1.name="rima";
+    document.write(obj1.name+"<br>");
+    document.write(obj3.name+"<br>");
+    */
+    /*
+    //sets
+    let s= new Set([1,2,3,1,2,5]); //set doesn't allow duplicate values
+    s.add(11);
+    console.log(s);
+    document.write(s.has(11)+"<br>");
+    document.write(s.has(111)+"<br>");
+    document.write(s.size+"<br>");
+    */
+    /*
+    //Map vs object
+    //keys in objects can only be tstrings but keys in Map can be of any datatype
+    //Object
+    let o={name:'Rohit',age:21,1:"one"}; //here 1 is string
+    document.write(o.name+"<br>");
+    document.write(o.age+"<br>");
+    for(let key in o){
+        document.write(typeof key+"<br>")
+    }
+    //Map
+    let m = new Map();
+    m.set('name','Rohit');
+    m.set('age',21);
+    m.set(1,'one');//here 1 is number
+    document.write(m.get('name')+"<br>");
+    document.write(m.get(1)+"<br>");
+    document.write(m.get('age')+"<br>");
+   
+    m.set([1,2,3],'ott');
+    m.set({name:"r"},'details');
+    for(let [key,value] of m){
+        document.write(key+":"+value +"<br>")
+    }
+    for(let key of m.keys()){
+        document.write(typeof key+"<br>");
+    }
+    */
+    /*
+    //optional chaining
+    const arr={
+    name:'Rohit',
+    //address:{home:"kolkata"}
+    }
+    document.write(arr?.name +"<br>"); //you can also do this 
+    document.write(arr?.address?.home); //here if don't give the ? it will produce an error in the console
+    */
+</script>
+</html>
+

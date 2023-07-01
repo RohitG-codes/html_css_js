@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascript</title>
+        <style>
+            body{
+                background: linear-gradient(to right, red , blue);
+            }
+            h1{
+                text-align: center;
+                color: chartreuse;
+                font-size: 50px;
+                font-family: verdana;
+                border: 2px solid crimson;
+                border-radius: 10px;
+                margin-top: 20%;
+                margin-left: 20%;
+                margin-right: 20%;
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body onload="showtime()">
+        <h1></h1>
+    </body>
+    <script>
+        function showtime(){
+            var x= new Date();
+            var h=x.getHours();
+            var m=x.getMinutes();
+            var s=x.getSeconds();
+            var ms=x.getMilliseconds();
+            session="AM";
+            if(h==0){
+                h=12;
+                session="AM";
+            }
+            if(h>12){
+                h=h-12;
+                session="PM";
+            }
+            h = h<10 ? "0"+ h : h ;
+            m = m<10 ? "0"+ m : m ;
+            s = s<10 ? "0"+ s : s ;
+            time=h + " : " + m + " : " + s + " : " + ms + " " +session;
+            document.getElementsByTagName('h1')[0].innerText=time;
+            setTimeout(showtime,1000);
+        }
+        // setInterval(showtime,1000); //you can use setInterval() here instead of setTimeout() within the function     
+    </script>
+</html>

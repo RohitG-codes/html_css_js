@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .blue{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="testt" class="red">HELLO EVERYONE !</div>
+    <button onclick="test()">click</button>
+    <h1 id="res"></h1>
+</body>
+<script>
+    function test(){
+        var cls=document.getElementById('testt').getAttribute("class");
+        // document.getElementById('res').innerText=cls;
+        if(cls == 'red'){
+            document.getElementById('testt').setAttribute("class","blue");
+        }
+        else{
+            document.getElementById('testt').setAttribute("class","red");
+        }
+    }
+</script>
+</html>

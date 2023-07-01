@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Please Enter Your Phone Number</h1>
+    <input type="text" name="" id="main" onkeyup="val(this)">
+    <div id="test"></div>
+</body>
+<script>
+    document.getElementById('test').style.color="red";
+    function val(element){
+        if(isNaN(element.value)){  //isNaN=is not a number
+            document.getElementById('test').innerText="please enter numbers only";
+        }
+        else{
+            document.getElementById('test').innerText="";
+            if(element.value.length>10){
+                document.getElementById('test').innerText="please enter 10 digits only";
+            }
+            else{
+                document.getElementById('test').innerText="";
+            }
+        }
+    }
+</script>
+</html>

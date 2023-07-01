@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>javascript</title>
+    </head>
+    <body>
+        <h1></h1>
+        <button onclick="test()">AVAILABLE HEIGHT</button>
+        <button onclick="test1()">HEIGHT</button>
+        <button onclick="test2()">AVAILABLE WIDTH</button>
+        <button onclick="test3()">WIDTH</button>
+        <button onclick="test4()">PIXEL DEPTH</button>
+        <button onclick="test5()">COLOR DEPTH</button>
+    </body>
+    <script>
+        function test(){
+             var ah=screen.availHeight;
+             document.getElementsByTagName('h1')[0].innerText=ah +"px";
+        }
+        function test1(){
+             var h=screen.height;
+             document.getElementsByTagName('h1')[0].innerText=h +"px";
+        }
+        function test2(){
+             var aw= screen.availWidth;
+             document.getElementsByTagName('h1')[0].innerText=aw +"px";
+        }
+        function test3(){
+             var w=screen.width;
+             document.getElementsByTagName('h1')[0].innerText=w +"px";
+        }
+        function test4(){
+             var pd=screen.pixelDepth;
+             document.getElementsByTagName('h1')[0].innerText=pd +"px";
+        }
+        function test5(){
+             var cd=screen.colorDepth;
+             document.getElementsByTagName('h1')[0].innerText=cd +"px";
+        }
+    </script>
+</html>

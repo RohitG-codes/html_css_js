@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class user{
+        constructor(fname,lname,age,sex){
+            this.fname=fname;
+            this.lname=lname;
+            this.age=age;
+            this.sex=sex;
+        }
+        about(){
+            document.write(`my name is ${this.fname} ${this.lname}`)
+        }
+        is18(){
+            return this.age>=18;
+        }
+    }
+    let user1=new user("rohit","gupta",21,"male");
+    user1.about();
+    document.write("<br>"+user1.is18());
+    document.write("<br>"+user1.lname);
+    document.write("<br>"+user1.sex);
+    console.log(Object.getPrototypeOf(user1));
+    //inheritance 
+    class newuser extends user{ //class newuser is inheriting all the features of class user
+        constructor(fname,lname,height){
+            super(fname,lname) //you can pass the other parameters(lname,age,sex) to of the parent class
+            this.height=height;
+        }
+        //getters and setters
+        get fullname(){
+            document.write("<br>"+ this.fname+" "+this.lname)
+        }
+        set fullnamee(fullnamee){
+            let[fname,lname]=fullnamee.split("");
+            this.fname=fname;
+            this.lname=lname;
+        }
+    }
+    newuser1=new newuser("mohit","dhar",5.9);
+    document.write("<br>"+newuser1.fname);
+    document.write("<br>"+newuser1.height);
+    document.write("<br>"+newuser1.lname);
+    // newuser1.get_fullname(); //you don't have to do this get(getters) will do it automatically
+    newuser1.fullnamee="rohitt guptaa";
+    console.log(newuser1);//see the console,fname and lname is changed 
+    //static method
+    class person{
+        static test(){
+            document.write("<br>"+"hi");
+        }
+    }
+    person.test(); //you don't have to create an object to call a static method it will be done automatically
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <body>
+        <div id="counter">0</div>
+        <button id="btn">CLICK ME</button>
+        <button id="stop" onclick="stop()">STOP</button>
+    </body>
+    <script>
+       var i=0;
+       document.getElementById('btn').addEventListener("click",
+          function(){
+            document.getElementById('counter').innerText=i;
+            i++;
+          })
+       document.getElementById('btn').addEventListener('mouseenter',colorchange); //onmouseenter,click this are events
+       function colorchange(){
+          document.getElementById('btn').style.background='red';
+       }
+       document.getElementById('btn').addEventListener('mouseleave',colorchange1); //mouseenter,click,mouseleave this are events
+       function colorchange1(){
+          document.getElementById('btn').style.background='white';
+       }
+       function stop(){
+        document.getElementById('btn').removeEventListener('mouseleave',colorchange1);
+       }
+    </script>
+</html>

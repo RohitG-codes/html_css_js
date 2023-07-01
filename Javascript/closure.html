@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--the right way to connect a js file to html is-->
+    <!--   <script src="xyz.js" defer></script>    -->
+</head>
+<body>
+    
+</body>
+<script>
+    //example 1
+    function hello(x){
+        let a='var a';
+        let b='var b';
+        return function hi(){
+            document.write(a+"<br>"+b+"<br>"+x+"<br>");
+        }
+    }
+    let res=hello("var x");
+    res();
+    //example 2
+    function func1(){
+        let counter=0;
+        return function func2(){
+            if(counter<1){
+                document.write("hi! you called me once."+"<br>")
+                counter++;
+            }
+            else{
+                document.write("i'm alredy called"+"<br>");
+            }
+        }
+    }
+    let f1=func1();
+    f1();
+    f1();
+    f1();
+    f1();
+    f1();
+</script>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS1</title>
+    <style type="text/css">
+        .box{
+            height: 500px;
+            width: 500px;
+            border: 2px solid black;
+            position: relative;
+        }
+        .inbox{
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            background-color: red;
+            left: 0px;
+            top: 0px;
+            animation-name: boxx;
+            animation-duration: 5s;
+            animation-delay: 1s;
+            animation-iteration-count: 2;
+            animation-fill-mode: backwards;
+            animation-direction: alternate-reverse;
+            animation-timing-function: linear;
+        }
+        @keyframes boxx{
+            0%{
+                top: 0px;
+                left: 0px;
+                background-color: red;
+            }
+            25%{
+                top: 0px;
+                left: 400px;
+                background-color: blue;
+            }
+            50%{
+                top: 400px;
+                left: 400px;
+                background-color: green;
+            }
+            75%{
+                top: 400px;
+                left: 0px;
+                background-color: aqua;
+            }
+            100%{ 
+                top: 0px;
+                left: 0px;
+                background-color: black;
+            }
+        }
+        .box1{
+            height: 150px;
+            width: 600px;
+            border: 2px solid black;
+            position: relative;
+        }
+        .inbox1{
+            height: 100px;
+            width: 150px;
+            position: absolute;
+            background-color: red;
+            left: 0px;
+            top: 0px;
+            margin-top: 20px;
+            animation-name: boxx1;
+            animation-duration: 5s;
+            animation-delay: 1s;
+            animation-iteration-count: 2;
+            animation-timing-function: ease-in-out;
+        }    
+        @keyframes boxx1{
+            from{
+                left: 0px;
+            }
+            to{
+                left: 100%;
+            }
+        }
+        .main{
+            height: 250px;
+            width: 700px;
+            border: 2px solid black;
+            position: relative;
+        }
+        .cloud1{
+            width: 150px;
+            height: 110px;
+            position: absolute;
+            top: 30px;
+            left: 0px;
+            animation-name: cloud1;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+        }
+        .cloud2{
+            width: 150px;
+            height: 110px;
+            position: absolute;
+            top: 32px;
+            left: 250px;
+            opacity: 0.8;
+            animation-name: cloud2;
+            animation-duration: 3s;
+            animation-delay: 2s;
+            animation-timing-function: ease-in;
+        }
+        .cloud3{
+            width: 150px;
+            height: 110px;
+            position: absolute;
+            top: 25px;
+            right: 0px;
+            opacity: 0.8;
+            animation-name: cloud3;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+        }
+        .sun{
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            background-color: rgba(255,165,0,0.6);
+            position: absolute;
+            top: 40px;
+            left: 0px;
+            animation-name: sun;
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+        }
+        @keyframes cloud1{
+            from{
+                top: 30px;
+                left: 0px;
+            }
+            to{
+                top: 30px;
+                left: 110%;
+            }
+        }
+        @keyframes cloud2{
+            from{
+                top: 32px;
+                left: 250px;
+            }
+            to{
+                top: 32px;
+                left: 110%;
+            }
+        }
+        @keyframes cloud3{
+            from{
+                top: 25px;
+                right: 0px;
+            }
+            to{
+                top: 25px;
+                right: 110%;
+            }
+        }
+        @keyframes sun{
+            from{
+                top: 40px;
+                left: 0px;
+                background-color: rgba(255,165,0,0.6);;
+            }
+            to{
+                top: 40px;
+                left: 110%;
+                background: rgba(255,165,0,1);
+            } 
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="inbox"></div>
+    </div>
+    <hr>
+    <div class="box1">
+        <div class="inbox1"></div>
+    </div>
+    <hr>
+    <div class="main">
+        <div class="sun"></div>
+        <div class="cloud1">
+            <img src="cloud.png" width="100%" height="100%"/>
+        </div>
+        <div class="cloud2">
+            <img src="cloud.png" width="100%" height="100%"/>
+        </div>
+        <div class="cloud3">
+            <img src="cloud.png" width="100%" height="100%"/>
+        </div>
+    </div>
+</body>       
+</html>

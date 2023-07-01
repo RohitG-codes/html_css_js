@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="head">
+        <p class="heading"> p1</p>
+        <p class="heading"> p2 <span style="display: none;"> hii</span></p>
+        <p class="heading"> p3</p>
+        <p class="heading"> p4</p>
+        <p class="heading"> p5</p>
+    </div>
+</body>
+<script>
+    /*
+    // DOM - document object model
+    console.log(window.document);
+    console.dir(window.document);
+    */
+    /*
+    //getElementsBy
+    let head = document.getElementsByClassName("heading"); //it will return a HTML collection
+    console.log(head);
+    let head0 = document.getElementsByClassName("heading")[0];
+    console.log(head0);
+    let head3 = document.getElementsByClassName("heading")[3];
+    console.log(head3);
+    */
+    /*
+    //querySelector
+    let h=document.querySelectorAll(".heading"); //it will return a Nodelist
+    console.log(h);
+    let h0=document.querySelector(".heading"); //it will return the first p tag 
+    console.log(h0);
+    let h1=document.querySelectorAll(".heading")[1]; //you have to use dot(.) for classes and hash(#) for ids
+    console.log(h1);
+    let h2=document.querySelectorAll(".heading")[2]; 
+    console.log(h2);
+    */
+    /*
+    //textContent and innertext
+    let p1=document.querySelectorAll(".head p ")[1];
+    console.log(p1.textContent);//in the browser the "hii" will be hidden but in the console you can see "p2 hii",this happens for "textcontent"
+    console.log(p1.innerText); //but you can see only "p2" but not the "hii"  in the console when you use "innerText"
+    //p1.textContent ="p2 is changed";//this is how you can change the text content
+    //p1.innerText="p2 is changed again";//this is how you can change the text content
+    */
+    /*
+    //change the styles of element
+    let p0=document.querySelector('p');
+    p0.style.color="red";
+    p0.style.fontSize="10px";
+    console.log(p0);
+    */
+    /*
+    //get and set attribute
+    let p3=document.querySelectorAll('p')[2];
+    console.log(p3.getAttribute('class'));
+    p3.setAttribute("class","p3 class");
+    console.log(p3.getAttribute("class"));
+    */
+    /*
+    //iterate through elements
+    // let p =document.getElementsByClassName('heading');
+    //console.log(h);
+    ////
+    // for(let i=0 ;i<p.length;i++){
+    //     console.log(p[i]);
+    // }
+    ////
+    ////
+    // for(let i of p){
+    //     console.log(i);
+    //     let items =i ;
+    //     items.style.color="red";
+    //     items.style.fontSize="25px";  
+    // }
+    ////                        
+                                     // you can't use foreach loop with HTML collection //but you cna use foreach loop with Nodelist
+    ////                                 
+    // p=Array.from(p); // changing the html collection into an array
+    // console.log(p);
+    // p.forEach((i) => {
+    //     console.log(i);
+    //     i.style.color="red";
+    // });
+    ////
+    ////
+    // let p1 = document.querySelectorAll('.heading')
+    // console.log(p1);
+    // p1.forEach((i)=>{
+    //     console.log(i);
+    // });
+    ////
+    */
+    /*
+    //innerHtml
+    let h =document.getElementsByTagName('div')[0];
+    h.innerHTML+='<h1> hi! i a\'m new element </h1>'; //here if you write only '=' instead of '+=' all the p tags will be vanished
+    console.log(h);  //if you want to use ' inside a '' you have to use \ before the ', like - '<h1> hi! i a\'m new element </h1>'
+    */
+    
+    // Traversing DOM tree 
+    
+    let rootnode=document.getRootNode(); // Document is the rootnode 
+    console.log(rootnode);
+    let htmlelements=rootnode.childNodes[0]; //html is the child node of Document
+    console.log(htmlelements);
+    // let htmlelementswithouttext = rootnode.children;
+    // console.log(htmlelementswithouttext);
+    let head = htmlelements.childNodes[0]; //it will return head
+    console.log(head);
+    let text = htmlelements.childNodes[1]; //it will return text --> "\n"(newline)
+    console.log(text);
+    let body = htmlelements.childNodes[2]; //it will return body
+    console.log(body);
+    console.log(head.parentNode);
+    console.log(head.nextSibling); //it will return text
+    console.log(head.nextSibling.nextSibling);  //it will return body
+    console.log(head.nextElementSibling); //it will return body  (next element is text,text's sibling is body)
+    // let p=document.getElementsByTagName('p')[0];
+    // bodyy =p.parentNode.parentNode;
+    // console.log(bodyy);
+    // bodyy.style.background = "grey";
+    // bodyy=document.body;
+    // bodyy.style.background = "yellow";
+    // let h= document.querySelector('.head');
+    // let ps= h.getElementsByClassName('heading'); //you can use getelementby.. on tags also 
+    // console.log(ps)
+    // let p= h.querySelector('.heading'); //you can use querySelector on tags also
+    // console.log(p);
+
+
+</script>
+</html>
